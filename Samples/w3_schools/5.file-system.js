@@ -3,6 +3,7 @@ var fs = require('fs');
 
 http.createServer(function(req, res) {
 
+    console.log("Program started");
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
 
@@ -15,18 +16,21 @@ http.createServer(function(req, res) {
     //renameFile('./contents/file-content4.txt', 'file-content4.txt', res);
 
     //res.end();
+    console.log("Program ended");
 
 }).listen(8080);
 
 
 function readFile(fileName, res) {
-    fs.readFile(fileName, function(err, data) {
-        if (err) throw err;
-        console.log('Read File');
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
-        res.end();
-    });
+    fs.readFile(fileName, readfileCallback);
+}
+
+function readfileCallback(err, data) {
+    if (err) throw err;
+    console.log('Read File');
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(data);
+    res.end();
 }
 
 function createFile(fileName, res) {
