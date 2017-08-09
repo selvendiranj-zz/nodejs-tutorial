@@ -6,9 +6,14 @@
     "language": "en",
     // words - list of words to be always considered correct
     "words": [
+        "Jayaraman",
+        "Selvendiran",
+        "contoso",
+        "esversion",
         "filetoupload",
         "fileupload",
         "multipart",
+        "parseurl",
         "readfile"
     ],
     // flagWords - list of words to be always considered incorrect
