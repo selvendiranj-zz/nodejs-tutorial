@@ -4,7 +4,7 @@
     "description": "NodeJS Tutorial that explain its concepts",
     "main": "Samples/w3_schools/index.js",
     "scripts": {
-        "debug": "node --nolazy --inspect-brk Samples/w3_schools/index.js"
+        "debug": "node --nolazy --inspect-brk Samples/tutorialspoint/8.event-loop.js"
     },
     "dependencies": {
         "body-parser": "^1.17.2",
@@ -13,7 +13,8 @@
         "formidable": "^1.1.1",
         "multer": "^1.3.0",
         "parseurl": "^1.3.1",
-        "upper-case": "^1.1.3"
+        "upper-case": "^1.1.3",
+        "gulp": "^3.9.1"
     },
     "devDependencies": {
         "eslint-config-google": "^0.9.1",
@@ -21,7 +22,8 @@
         "eslint-plugin-import": "^2.7.0",
         "eslint-plugin-node": "^5.1.1",
         "eslint-plugin-promise": "^3.5.0",
-        "eslint-plugin-standard": "^3.0.1"
+        "eslint-plugin-standard": "^3.0.1",
+        "eslint-config-airbnb": "^15.1.0"
     },
     "engines": {
         "node": "5.8.*"
