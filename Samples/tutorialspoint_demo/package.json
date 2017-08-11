@@ -1,0 +1,42 @@
+{
+    "name": "nodejs-tutorial",
+    "version": "1.0.0",
+    "description": "NodeJS Tutorial that explain its concepts",
+    "main": "Samples/w3_schools/index.js",
+    "scripts": {
+        "debug": "node --nolazy --inspect-brk Samples/w3_schools/index.js",
+        "start": "node main.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.17.2",
+        "cookie-parser": "^1.4.3",
+        "express": "^4.15.3",
+        "formidable": "^1.1.1",
+        "multer": "^1.3.0",
+        "parseurl": "^1.3.1",
+        "upper-case": "^1.1.3"
+    },
+    "devDependencies": {
+        "eslint-config-google": "^0.9.1",
+        "eslint-config-standard": "^10.2.1",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-node": "^5.1.1",
+        "eslint-plugin-promise": "^3.5.0",
+        "eslint-plugin-standard": "^3.0.1"
+    },
+    "engines": {
+        "node": "5.8.*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/selvendiranj/nodejs-tutorial"
+    },
+    "keywords": [
+        "tutorial",
+        "nodejs",
+        "examples"
+    ],
+    "author": "Akansha and Sai Sarath",
+
+    "license": "MIT"
+}
