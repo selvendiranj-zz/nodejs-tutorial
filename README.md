@@ -25,5 +25,7 @@ Start learning with the following steps:
 * [w3schools](https://www.w3schools.com/nodejs/)
 * [tutorialspoint](https://www.tutorialspoint.com/nodejs/)
 * [Best Practices](https://www.codementor.io/mattgoldspink/nodejs-best-practices-du1086jja)
+* [best Practices2](https://github.com/mattdesl/module-best-practices)
+* [Publishing to npm](https://quickleft.com/blog/creating-and-publishing-a-node-js-module/)
 
 ### Happy Learning!!! 
