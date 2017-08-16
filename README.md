@@ -21,11 +21,12 @@ Start learning with the following steps:
 * Once the node has started you will see something like this `Server running at http://127.0.0.1:8080/` in your command prompt
 * Hit `http://127.0.0.1:8080` in your browser and Start learning Node.js
 
-### Acknowledgments
+### References
 * [w3schools](https://www.w3schools.com/nodejs/)
 * [tutorialspoint](https://www.tutorialspoint.com/nodejs/)
 * [Best Practices](https://www.codementor.io/mattgoldspink/nodejs-best-practices-du1086jja)
 * [best Practices2](https://github.com/mattdesl/module-best-practices)
 * [Publishing to npm](https://quickleft.com/blog/creating-and-publishing-a-node-js-module/)
+* [JavaScript Testing](https://medium.com/powtoon-engineering/a-complete-guide-to-testing-javascript-in-2017-a217b4cd5a2a)
 
 ### Happy Learning!!! 
