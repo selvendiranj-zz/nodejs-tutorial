@@ -1,3 +1,9 @@
+var webModules = module.exports={};
+
+webModules.getWebModules = function(){
+
+ console.log("Inside Web Modules");   
+
 //Node as a server
 var http = require('http');
 var fs = require('fs');
@@ -30,10 +36,10 @@ http.createServer(function(request, response) {
         // Send the response body 
         response.end();
     });
-}).listen(8081);
+}).listen(3005);
 
 // Console will print the message
-console.log('Server running at http://127.0.0.1:8081/');
+console.log('Server running at http://127.0.0.1:3005/');
 
 //Node as a Client
 var http = require('http');
@@ -41,8 +47,8 @@ var http = require('http');
 // Options to be used by request 
 var options = {
     host: 'localhost',
-    port: '8081',
-    path: '/index.htm'
+    port: '3005',
+    path: '/main.html'
 };
 
 // Callback function is used to deal with response
@@ -61,3 +67,6 @@ var callback = function(response) {
     // Make a request to the server
 var req = http.request(options, callback);
 req.end();
+
+console.log("End of Web Modules");
+};

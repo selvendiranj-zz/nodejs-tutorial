@@ -1,3 +1,9 @@
+var netModules = module.exports={};
+
+
+netModules.getNetModules = function(){
+
+    console.log("Inside Net Moduels");
 //File Server
 var net = require('net');
 var server = net.createServer(function(connection) {
@@ -25,3 +31,6 @@ client.on('data', function(data) {
 client.on('end', function() {
     console.log('disconnected from server');
 });
+
+console.log("Inside Net Moduels - end");
+};
