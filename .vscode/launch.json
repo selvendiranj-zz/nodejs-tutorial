@@ -9,7 +9,7 @@
             "name": "Launch Program",
             "args": [],
             "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}\\Samples\\w3_schools\\index.js",
+            "program": "${workspaceRoot}\\Samples\\tutorialspoint_demo\\main.js",
             "env": {
                 "NODE_ENV": "development"
             },

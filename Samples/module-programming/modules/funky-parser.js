@@ -5,14 +5,15 @@ function createFunkyParser(opt) {
     // private data
     var foo = opt.foo || 'default'
 
-    // API/data for end-user
-    return {
-        foo: foo
-    }
-
     // private functions
     function parse() {
+        console.log('inside parse');
+    }
 
+    // API/data for end-user`
+    return {
+        foo: foo,
+        parse: parse
     }
 }
 

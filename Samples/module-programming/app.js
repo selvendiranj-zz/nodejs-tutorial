@@ -35,6 +35,6 @@ var qux = new Qux();
 qux.log();
 
 //
-var parserProto = require('funky-parser');
+var parserProto = require('./modules/funky-parser');
 var parserObj = parserProto({ foo: 'bar' });
-console.log(parser.foo)
+console.log(parserObj.parse())

@@ -1,36 +1,36 @@
-var netModules = module.exports={};
+var netModules = module.exports = {};
 
 
-netModules.getNetModules = function(){
+netModules.getNetModules = function() {
 
     console.log("Inside Net Moduels");
-//File Server
-var net = require('net');
-var server = net.createServer(function(connection) {
-    console.log('client connected');
+    //File Server
+    var net = require('net');
+    var server = net.createServer(function(connection) {
+        console.log('client connected');
 
-    connection.on('end', function() {
-        console.log('client disconnected');
+        connection.on('end', function() {
+            console.log('client disconnected');
+        });
+        connection.write('Hello World!\r\n');
+        connection.pipe(connection);
     });
-    connection.write('Hello World!\r\n');
-    connection.pipe(connection);
-});
-server.listen(8080, function() {
-    console.log('server is listening');
-});
+    server.listen(8080, function() {
+        console.log('server is listening');
+    });
 
-//File Client
-var net = require('net');
-var client = net.connect({ port: 8080 }, function() {
-    console.log('connected to server!');
-});
-client.on('data', function(data) {
-    console.log(data.toString());
-    client.end();
-});
-client.on('end', function() {
-    console.log('disconnected from server');
-});
+    //File Client
+    var net = require('net');
+    var client = net.connect({ port: 8080 }, function() {
+        console.log('connected to server!');
+    });
+    client.on('data', function(data) {
+        console.log(data.toString());
+        client.end();
+    });
+    client.on('end', function() {
+        console.log('disconnected from server');
+    });
 
-console.log("Inside Net Moduels - end");
+    console.log("Inside Net Moduels - end");
 };

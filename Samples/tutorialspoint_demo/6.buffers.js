@@ -1,89 +1,89 @@
-var  buffers = module.exports ={};
+var buffers = module.exports = {};
 
-buffers.getbuffers= function(){
+buffers.getbuffers = function() {
 
- var output = '\"var buf = new Buffer(256);\" is the syntax to create an uninitiated Buffer of 256 octets ;\n';   
- 
-//Creating Buffers
-buf = new Buffer(256);
+    var output = '\"var buf = new Buffer(256);\" is the syntax to create an uninitiated Buffer of 256 octets ;\n';
 
-//Writing to Buffers
-len = buf.write("Simply Easy Learning");
+    //Creating Buffers
+    buf = new Buffer(256);
 
-output += '\"len = buf.write(\"Simply Easy Learning\");\" is the syntax of the method to write into a Node Buffer and method returns the number of octets written.\n';
-output += "Octets written : " + len+"\n";
+    //Writing to Buffers
+    len = buf.write("Simply Easy Learning");
 
-//Reading from Buffers
-buf = new Buffer(26);
-for (var i = 0; i < 26; i++) {
-    buf[i] = i + 97;
-}
+    output += '\"len = buf.write(\"Simply Easy Learning\");\" is the syntax of the method to write into a Node Buffer and method returns the number of octets written.\n';
+    output += "Octets written : " + len + "\n";
 
-output += '\"buf.toString([encoding][, start][, end])\" is the syntax of the method to read data from a Node Buffer and method decodes and returns a string from buffer data encoded using the specified character set encoding.\n';
-output += "In ASCII:"+buf.toString('ascii')+"\n"; // outputs: abcdefghijklmnopqrstuvwxyz
-output += "In ASCII, start point is 0 and end is 5: "+buf.toString('ascii', 0, 5)+"\n"; // outputs: abcde
-output += "In UTF, start point is 0 and end is 5: "+buf.toString('utf8', 0, 5)+"\n"; // outputs: abcde
-output += "In Default which is UTF8, start point is 0 and end is 5: "+buf.toString(undefined, 0, 5)+"\n"; // encoding defaults to 'utf8', outputs abcde
+    //Reading from Buffers
+    buf = new Buffer(26);
+    for (var i = 0; i < 26; i++) {
+        buf[i] = i + 97;
+    }
 
-//Convert Buffer to JSON
+    output += '\"buf.toString([encoding][, start][, end])\" is the syntax of the method to read data from a Node Buffer and method decodes and returns a string from buffer data encoded using the specified character set encoding.\n';
+    output += "In ASCII:" + buf.toString('ascii') + "\n"; // outputs: abcdefghijklmnopqrstuvwxyz
+    output += "In ASCII, start point is 0 and end is 5: " + buf.toString('ascii', 0, 5) + "\n"; // outputs: abcde
+    output += "In UTF, start point is 0 and end is 5: " + buf.toString('utf8', 0, 5) + "\n"; // outputs: abcde
+    output += "In Default which is UTF8, start point is 0 and end is 5: " + buf.toString(undefined, 0, 5) + "\n"; // encoding defaults to 'utf8', outputs abcde
 
-output += '\"var buf = new Buffer(\'Simply Easy Learning\');\" is the syntax to create a Buffer from a given string and optionally encoding type\n';
-var buf = new Buffer('Simply Easy Learning');
-output += '\"var json = buf.toJSON(buf); \"is the syntax of the method to convert a Node Buffer into JSON object and method returns a JSON-representation of the Buffer instance.\n';
-var json = buf.toJSON(buf);
-output += "JSON output :\n"+json+"\n";
+    //Convert Buffer to JSON
 
-//Concatenate Buffers
-var buffer1 = new Buffer('TutorialsPoint ');
-var buffer2 = new Buffer('Simply Easy Learning');
+    output += '\"var buf = new Buffer(\'Simply Easy Learning\');\" is the syntax to create a Buffer from a given string and optionally encoding type\n';
+    var buf = new Buffer('Simply Easy Learning');
+    output += '\"var json = buf.toJSON(buf); \"is the syntax of the method to convert a Node Buffer into JSON object and method returns a JSON-representation of the Buffer instance.\n';
+    var json = buf.toJSON(buf);
+    output += "JSON output :\n" + json + "\n";
 
-output += '\"var buffer3 = Buffer.concat([buffer1, buffer2]); \"is the syntax of the method to concatenate Node buffers to a single Node Buffer and method returns a Buffer instance.\n';
-var buffer3 = Buffer.concat([buffer1, buffer2]);
+    //Concatenate Buffers
+    var buffer1 = new Buffer('TutorialsPoint ');
+    var buffer2 = new Buffer('Simply Easy Learning');
 
-output += "buffer3 content: " + buffer3.toString()+"\n";
+    output += '\"var buffer3 = Buffer.concat([buffer1, buffer2]); \"is the syntax of the method to concatenate Node buffers to a single Node Buffer and method returns a Buffer instance.\n';
+    var buffer3 = Buffer.concat([buffer1, buffer2]);
 
-//Compare Buffers
-var buffer1 = new Buffer('ABC');
-var buffer2 = new Buffer('ABCD');
+    output += "buffer3 content: " + buffer3.toString() + "\n";
 
-output += '\"var result = buffer1.compare(buffer2);\" is the syntax of the method to compare two Node buffers and returns a number indicating whether it comes before or after or is the same as the otherBuffer in sort order.\n';
-var result = buffer1.compare(buffer2);
+    //Compare Buffers
+    var buffer1 = new Buffer('ABC');
+    var buffer2 = new Buffer('ABCD');
 
-if (result < 0) {
-    output += buffer1 + " comes before " + buffer2+"\n";
-} else if (result == 0) {
-    output += buffer1 + " is same as " + buffer2+"\n";
-} else {
-    output += buffer1 + " comes after " + buffer2+"\n";
-}
+    output += '\"var result = buffer1.compare(buffer2);\" is the syntax of the method to compare two Node buffers and returns a number indicating whether it comes before or after or is the same as the otherBuffer in sort order.\n';
+    var result = buffer1.compare(buffer2);
 
-//Copy Buffer
-var buffer1 = new Buffer('ABC');
+    if (result < 0) {
+        output += buffer1 + " comes before " + buffer2 + "\n";
+    } else if (result == 0) {
+        output += buffer1 + " is same as " + buffer2 + "\n";
+    } else {
+        output += buffer1 + " comes after " + buffer2 + "\n";
+    }
 
-//copy a buffer
-var buffer2 = new Buffer(3);
+    //Copy Buffer
+    var buffer1 = new Buffer('ABC');
 
-output += '\"buffer1.copy(buffer2);\" is the syntax of the method to copy a node buffer\n';
-buffer1.copy(buffer2);
-output += "buffer2 content: " + buffer2.toString()+"\n";
+    //copy a buffer
+    var buffer2 = new Buffer(3);
 
-//Slice Buffer
-var buffer1 = new Buffer('TutorialsPoint');
+    output += '\"buffer1.copy(buffer2);\" is the syntax of the method to copy a node buffer\n';
+    buffer1.copy(buffer2);
+    output += "buffer2 content: " + buffer2.toString() + "\n";
 
-//slicing a buffer
+    //Slice Buffer
+    var buffer1 = new Buffer('TutorialsPoint');
 
-output += '\"var buffer2 = buffer1.slice(0, 9);\" s the syntax of the method to get a sub-buffer of a node buffer and Returns a new buffer which references the same memory as the old one, but offset and cropped by the start (defaults to 0) and end (defaults to buffer.length) indexes. Negative indexes start from the end of the buffer.\n';
-var buffer2 = buffer1.slice(0, 9);
-output += "buffer2 content: " + buffer2.toString()+'\n';
+    //slicing a buffer
 
-//Buffer Length
-var buffer = new Buffer('TutorialsPoint');
+    output += '\"var buffer2 = buffer1.slice(0, 9);\" s the syntax of the method to get a sub-buffer of a node buffer and Returns a new buffer which references the same memory as the old one, but offset and cropped by the start (defaults to 0) and end (defaults to buffer.length) indexes. Negative indexes start from the end of the buffer.\n';
+    var buffer2 = buffer1.slice(0, 9);
+    output += "buffer2 content: " + buffer2.toString() + '\n';
 
-output += '\"buffer.length\" is the syntax of the method to get a size of a node buffer in bytes and returns the size of a buffer in bytes\n';
+    //Buffer Length
+    var buffer = new Buffer('TutorialsPoint');
 
-//length of the buffer
-output += "buffer length: " + buffer.length;
+    output += '\"buffer.length\" is the syntax of the method to get a size of a node buffer in bytes and returns the size of a buffer in bytes\n';
 
-return output;
+    //length of the buffer
+    output += "buffer length: " + buffer.length;
+
+    return output;
 
 };
