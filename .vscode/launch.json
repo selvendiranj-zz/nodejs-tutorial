@@ -9,7 +9,7 @@
             "name": "Launch Program",
             "args": [],
             "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}\\Samples\\tutorialspoint_demo\\main.js",
+            "program": "${workspaceRoot}\\Samples\\express-rest\\2.add-user.js",
             "env": {
                 "NODE_ENV": "development"
             },

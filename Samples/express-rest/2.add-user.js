@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var fs = require("fs");
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
 var user = {
     "user4": {
         "name": "mohit",
