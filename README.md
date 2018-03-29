@@ -29,4 +29,9 @@ Start learning with the following steps:
 * [Publishing to npm](https://quickleft.com/blog/creating-and-publishing-a-node-js-module/)
 * [JavaScript Testing](https://medium.com/powtoon-engineering/a-complete-guide-to-testing-javascript-in-2017-a217b4cd5a2a)
 
+* [Simple tutorial to start with module programming](https://darrenderidder.github.io/talks/ModulePatterns/)
+* [Explains the basics of module.exports](http://stackabuse.com/how-to-use-module-exports-in-node-js/)
+* [nodejs modules from nodejs api documentation](https://nodejs.org/api/modules.html)
+* [creating and publishing of node modules to npm](https://quickleft.com/blog/creating-and-publishing-a-node-js-module/)
+
 ### Happy Learning!!! 
